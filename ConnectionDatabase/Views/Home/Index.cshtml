@@ -1,0 +1,31 @@
+﻿@model List<ConnectionDatabase.Models.Person>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h1 style="color : blue"><i>People</i></h1>
+<table class="table table-bordered" style="background-color :cornsilk; color :darkorchid">
+    <tr>
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>IsPlayer</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+            {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Firstname</td>
+            <td>@item.Lastname</td>
+            <td>@item.Age</td>
+            <td>@(item.IsPlayer ? "Yes" : "No")</td>
+        </tr>
+            }
+    </tbody>
+</table>
